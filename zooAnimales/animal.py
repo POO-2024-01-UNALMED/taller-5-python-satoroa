@@ -2,6 +2,11 @@ import zooAnimales
 
 class Animal():
     _totalAnimales = 0
+    totalMamiferos = 0
+    totalAves = 0
+    totalReptiles = 0
+    totalPeces = 0
+    totalAnfibios = 0
     _zona = ""
 
     def __init__(self, nombre, edad, habitat, genero):
@@ -16,8 +21,8 @@ class Animal():
     
     @staticmethod
     def totalPorTipo():
-        return f"Mamiferos : {Animal.totalMamiferos}\nAves : {Animal.totalAves}\nReptiles : {Animal.totalReptiles}\nPeces : {Animal.totalPeces}\nAnfibios : {Animal.totalAnfibios}"
-
+        return "Mamiferos : " + str(zooAnimales.mamifero.Mamifero.cantidadMamiferos()) + "\nAves : " + str(zooAnimales.ave.Ave.cantidadAves()) + "\nReptiles : " + str(zooAnimales.reptil.Reptil.cantidadReptiles()) + "\nPeces : " + str(zooAnimales.pez.Pez.cantidadPeces()) + "\nAnfibios : " + str(zooAnimales.anfibio.Anfibio.cantidadAnfibios())
+    
     def toString(self):
         if self._zona != "":
             return "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) + ", habito en " + self._habitat + " y mi genero es " + self._genero + ", la zona en la que me ubico es " + self._zona.getNombre() + ", en el zoo " + self._zona.getZoo().getNombre()
