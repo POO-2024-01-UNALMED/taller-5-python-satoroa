@@ -1,12 +1,7 @@
 import zooAnimales
 
-class Animal:
+class Animal():
     _totalAnimales = 0
-    totalMamiferos = 0
-    totalAves = 0
-    totalReptiles = 0
-    totalPeces = 0
-    totalAnfibios = 0
     _zona = ""
 
     def __init__(self, nombre, edad, habitat, genero):
@@ -14,7 +9,7 @@ class Animal:
         self._edad = edad
         self._habitat = habitat
         self._genero = genero
-        Animal.totalAnimales += 1
+        Animal._totalAnimales += 1
 
     def movimiento():
         return "desplazarse"
